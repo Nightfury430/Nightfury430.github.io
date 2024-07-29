@@ -1,0 +1,59 @@
+# Site settings
+title: My Awesome Site
+email: your-email@example.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+# Social links
+twitter_username: your-twitter-handle
+github_username:  your-github-handle
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title.html
+
+# Pagination
+paginate: 5
+paginate_path: "/page/:num/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: your-name
+
+# Include and exclude files
+include:
+  - _pages
+  - _posts
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Plugins configuration
+jekyll-feed:
+  path: feed.xml
+
+jekyll-seo-tag:
+  google_analytics: UA-XXXXXXXX-X
+
+# Custom variables
+custom_var: my_custom_value
